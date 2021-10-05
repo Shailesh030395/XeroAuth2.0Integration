@@ -1,0 +1,31 @@
+﻿@model List<Xero.NetStandard.OAuth2.Client.Model.XeroTenants>
+@{
+    ViewBag.Title = "Connection List";
+}
+
+<div class="container">
+    <br />
+    <div class="row">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>OrganizationId/TenentId</th>
+                    <th>Organization Name</th>   
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var org in Model)
+                {
+                <tr>
+                    <td>@org.tenantId</td>
+                    <td>@org.tenantName</td>                    
+                    <td><a href="/Home/CreateContact?tenantId=@org.tenantId">Contact Create</a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

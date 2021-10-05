@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeroOAuth2Integration", "XeroOAuth2Integration.csproj", "{83FB1DD0-9A9E-4A22-82FA-47F2E399BD89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.NetStandard.OAuth2", "..\Xero.NetStandard.OAuth2\Xero.NetStandard.OAuth2.csproj", "{DC34B214-75F7-4AF9-BAAE-760694D1CA23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xero.NetStandard.OAuth2.Client", "..\Xero.NetStandard.OAuth2.Client\Xero.NetStandard.OAuth2.Client.csproj", "{BE2629ED-6615-4215-A08A-654F9A9A01B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83FB1DD0-9A9E-4A22-82FA-47F2E399BD89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83FB1DD0-9A9E-4A22-82FA-47F2E399BD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83FB1DD0-9A9E-4A22-82FA-47F2E399BD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83FB1DD0-9A9E-4A22-82FA-47F2E399BD89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC34B214-75F7-4AF9-BAAE-760694D1CA23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC34B214-75F7-4AF9-BAAE-760694D1CA23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC34B214-75F7-4AF9-BAAE-760694D1CA23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC34B214-75F7-4AF9-BAAE-760694D1CA23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2629ED-6615-4215-A08A-654F9A9A01B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2629ED-6615-4215-A08A-654F9A9A01B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2629ED-6615-4215-A08A-654F9A9A01B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2629ED-6615-4215-A08A-654F9A9A01B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B07A22D0-409E-417E-B949-2C2616333548}
+	EndGlobalSection
+EndGlobal

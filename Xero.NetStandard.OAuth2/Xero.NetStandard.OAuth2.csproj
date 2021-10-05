@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC34B214-75F7-4AF9-BAAE-760694D1CA23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xero.NetStandard.OAuth2</RootNamespace>
+    <AssemblyName>Xero.NetStandard.OAuth2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\XeroOAuth2Integration\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\XeroOAuth2Integration\packages\RestSharp.106.10.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\AccountingApi.cs" />
+    <Compile Include="Client\ApiClient.cs" />
+    <Compile Include="Client\ApiException.cs" />
+    <Compile Include="Client\ApiResponse.cs" />
+    <Compile Include="Client\ClientUtils.cs" />
+    <Compile Include="Client\Configuration.cs" />
+    <Compile Include="Client\ExceptionFactory.cs" />
+    <Compile Include="Client\GlobalConfiguration.cs" />
+    <Compile Include="Client\HttpMethod.cs" />
+    <Compile Include="Client\IApiAccessor.cs" />
+    <Compile Include="Client\IAsynchronousClient.cs" />
+    <Compile Include="Client\IReadableConfiguration.cs" />
+    <Compile Include="Client\ISynchronousClient.cs" />
+    <Compile Include="Client\Multimap.cs" />
+    <Compile Include="Client\OpenAPIDateConverter.cs" />
+    <Compile Include="Client\RequestOptions.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\Accounts.cs" />
+    <Compile Include="Model\AccountsPayable.cs" />
+    <Compile Include="Model\AccountsReceivable.cs" />
+    <Compile Include="Model\AccountType.cs" />
+    <Compile Include="Model\Address.cs" />
+    <Compile Include="Model\Allocation.cs" />
+    <Compile Include="Model\Allocations.cs" />
+    <Compile Include="Model\Attachment.cs" />
+    <Compile Include="Model\Attachments.cs" />
+    <Compile Include="Model\Balances.cs" />
+    <Compile Include="Model\BankTransaction.cs" />
+    <Compile Include="Model\BankTransactions.cs" />
+    <Compile Include="Model\BankTransfer.cs" />
+    <Compile Include="Model\BankTransfers.cs" />
+    <Compile Include="Model\BatchPayment.cs" />
+    <Compile Include="Model\BatchPaymentDetails.cs" />
+    <Compile Include="Model\BatchPayments.cs" />
+    <Compile Include="Model\Bill.cs" />
+    <Compile Include="Model\BrandingTheme.cs" />
+    <Compile Include="Model\BrandingThemes.cs" />
+    <Compile Include="Model\CISOrgSetting.cs" />
+    <Compile Include="Model\CISSetting.cs" />
+    <Compile Include="Model\CISSettings.cs" />
+    <Compile Include="Model\Contact.cs" />
+    <Compile Include="Model\ContactGroup.cs" />
+    <Compile Include="Model\ContactGroups.cs" />
+    <Compile Include="Model\ContactPerson.cs" />
+    <Compile Include="Model\Contacts.cs" />
+    <Compile Include="Model\CountryCode.cs" />
+    <Compile Include="Model\CreditNote.cs" />
+    <Compile Include="Model\CreditNotes.cs" />
+    <Compile Include="Model\Currencies.cs" />
+    <Compile Include="Model\Currency.cs" />
+    <Compile Include="Model\CurrencyCode.cs" />
+    <Compile Include="Model\Element.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Employees.cs" />
+    <Compile Include="Model\Error.cs" />
+    <Compile Include="Model\ExpenseClaim.cs" />
+    <Compile Include="Model\ExpenseClaims.cs" />
+    <Compile Include="Model\ExternalLink.cs" />
+    <Compile Include="Model\HistoryRecord.cs" />
+    <Compile Include="Model\HistoryRecords.cs" />
+    <Compile Include="Model\Invoice.cs" />
+    <Compile Include="Model\InvoiceReminder.cs" />
+    <Compile Include="Model\InvoiceReminders.cs" />
+    <Compile Include="Model\Invoices.cs" />
+    <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\Items.cs" />
+    <Compile Include="Model\Journal.cs" />
+    <Compile Include="Model\JournalLine.cs" />
+    <Compile Include="Model\Journals.cs" />
+    <Compile Include="Model\LineAmountTypes.cs" />
+    <Compile Include="Model\LineItem.cs" />
+    <Compile Include="Model\LineItemTracking.cs" />
+    <Compile Include="Model\LinkedTransaction.cs" />
+    <Compile Include="Model\LinkedTransactions.cs" />
+    <Compile Include="Model\ManualJournal.cs" />
+    <Compile Include="Model\ManualJournalLine.cs" />
+    <Compile Include="Model\ManualJournals.cs" />
+    <Compile Include="Model\OnlineInvoice.cs" />
+    <Compile Include="Model\OnlineInvoices.cs" />
+    <Compile Include="Model\Organisation.cs" />
+    <Compile Include="Model\Organisations.cs" />
+    <Compile Include="Model\Overpayment.cs" />
+    <Compile Include="Model\Overpayments.cs" />
+    <Compile Include="Model\Payment.cs" />
+    <Compile Include="Model\Payments.cs" />
+    <Compile Include="Model\PaymentService.cs" />
+    <Compile Include="Model\PaymentServices.cs" />
+    <Compile Include="Model\PaymentTerm.cs" />
+    <Compile Include="Model\PaymentTermType.cs" />
+    <Compile Include="Model\Phone.cs" />
+    <Compile Include="Model\Prepayment.cs" />
+    <Compile Include="Model\Prepayments.cs" />
+    <Compile Include="Model\Purchase.cs" />
+    <Compile Include="Model\PurchaseOrder.cs" />
+    <Compile Include="Model\PurchaseOrders.cs" />
+    <Compile Include="Model\Receipt.cs" />
+    <Compile Include="Model\Receipts.cs" />
+    <Compile Include="Model\RepeatingInvoice.cs" />
+    <Compile Include="Model\RepeatingInvoices.cs" />
+    <Compile Include="Model\Report.cs" />
+    <Compile Include="Model\ReportAttribute.cs" />
+    <Compile Include="Model\ReportCell.cs" />
+    <Compile Include="Model\ReportFields.cs" />
+    <Compile Include="Model\ReportRow.cs" />
+    <Compile Include="Model\ReportRows.cs" />
+    <Compile Include="Model\Reports.cs" />
+    <Compile Include="Model\ReportWithRow.cs" />
+    <Compile Include="Model\ReportWithRows.cs" />
+    <Compile Include="Model\RequestEmpty.cs" />
+    <Compile Include="Model\RowType.cs" />
+    <Compile Include="Model\SalesTrackingCategory.cs" />
+    <Compile Include="Model\Schedule.cs" />
+    <Compile Include="Model\TaxComponent.cs" />
+    <Compile Include="Model\TaxRate.cs" />
+    <Compile Include="Model\TaxRates.cs" />
+    <Compile Include="Model\TaxType.cs" />
+    <Compile Include="Model\TenNinteyNineContact.cs" />
+    <Compile Include="Model\TimeZone.cs" />
+    <Compile Include="Model\TrackingCategories.cs" />
+    <Compile Include="Model\TrackingCategory.cs" />
+    <Compile Include="Model\TrackingOption.cs" />
+    <Compile Include="Model\TrackingOptions.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="Model\ValidationError.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

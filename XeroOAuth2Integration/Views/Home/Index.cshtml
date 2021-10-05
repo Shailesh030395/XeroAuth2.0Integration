@@ -1,0 +1,25 @@
+﻿@using System.Configuration;
+@{
+    Layout = null;
+    ViewBag.Title = "Sign-in";
+    string XeroClientId = ConfigurationSettings.AppSettings["XeroClientId"].ToString();    
+    string XeroScope = ConfigurationSettings.AppSettings["XeroScope"].ToString();
+    string XeroCallbackUri = ConfigurationSettings.AppSettings["XeroCallbackUri"].ToString();
+}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="xero-client-id" content="@XeroClientId">
+    <meta name="xero-scopes" content="@XeroScope">    
+    <meta name="xero-redirect-uri" content="@XeroCallbackUri">
+    <!-- optional -->
+    <meta name="xero-state" content="YOUR_REQUEST_STATE">
+    <title>My App</title>
+</head>
+<body>
+    <br />  <br />
+    <span data-xero-sso data-label="Sign In with Xero"></span>
+    <script src="https://edge.xero.com/platform/sso/xero-sso.js" async defer></script>
+</body>
+</html>
